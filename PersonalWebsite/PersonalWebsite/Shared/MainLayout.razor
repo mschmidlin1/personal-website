@@ -1,0 +1,80 @@
+﻿@inherits LayoutComponentBase
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<Style>
+    .horizontal-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #8f8f89;
+        padding: 15px 0;
+    }
+
+    .nav {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin-right: 20px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #007bff;
+        padding: 0.5rem 1rem;
+        display: block;
+        transition: color 0.15s;
+    }
+
+    .nav-link:hover {
+        color: #0056b3;
+    }
+</Style>
+
+<div class="horizontal-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <NavLink class="nav-link" href="/">
+                <span class="nav-link-icon" title="Home">
+                    <i class="fa-solid fa-house fa-3x"></i>
+                </span>
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="/Counter">
+                <span class="nav-link-icon">
+                    <i class="fa-solid fa-user fa-3x"></i>
+                </span>
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="/fetchdata">
+                <span class="nav-link-icon">
+                    <i class="fa-regular fa-file-lines fa-3x"></i>
+                </span>
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="/">
+                <span class="nav-link-icon">
+                    <i class="fa-solid fa-link fa-3x"></i>
+                </span>
+            </NavLink>
+        </li>
+        <!-- Add more NavLink components as needed -->
+    </ul>
+</div>
+
+<div class="container">
+    <div class="content">
+        @Body
+    </div>
+</div>
+
+
